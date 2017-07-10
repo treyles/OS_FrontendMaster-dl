@@ -10,7 +10,7 @@ def format_filename(filename_str):
     filename = filename.replace(' ', '_')
     return filename
 
-def download_file(url, path):
+def download_file(url, path, self):
     # FIXME(Xinyang): Better exception handling for empty url
     if url is None:
         return
