@@ -18,11 +18,11 @@ def download_file(url, path, self):
         return
 
     if not os.path.isfile(path) or os.path.getsize(path) == 0:
-      browser.get(url)
-      temporaryURL = browser.current_url
-      browser.back()
-      buff = urlopen(temporaryURL)
-      print("Downloading: %s" % (path))
+        browser.get(url)
+        temporaryURL = browser.current_url
+        browser.back()
+        buff = urlopen(temporaryURL)
+        print("Downloading: %s" % (path))
 
         with open(path, 'wb') as local_file:
             local_file.write(buff.read())
