@@ -18,9 +18,9 @@ def download_file(url, path, self):
         return
 
     if not os.path.isfile(path) or os.path.getsize(path) == 0:
-        browser.get(url)
-        temporaryURL = browser.current_url
-        browser.back()
+        self.browser.get(url)
+        temporaryURL = self.browser.current_url
+        self.browser.back()
         buff = urlopen(temporaryURL)
         print("Downloading: %s" % (path))
 
